@@ -1,308 +1,439 @@
-# What Is Cognitive Neuroscience? — Bridging the Gap Between Brain and Mind
-
-**Course:** Cognition and Neuroscience — University of Bologna, A.Y. 2025/2026  
-**Instructor:** Francesca Starita ([francesca.starita2@unibo.it](mailto:francesca.starita2@unibo.it))
+# What Is Cognitive Neuroscience?
+### Bridging the Gap Between Brain and Mind
+**Course:** Cognition and Neuroscience — University of Bologna, AY 2025/2026  
+**Instructor:** Francesca Starita
 
 ---
 
 ## 📌 Overview
 
-This lecture introduces the field of **cognitive neuroscience** — an interdisciplinary science at the intersection of brain structure (neuroscience) and mental function (cognition). It sets up the entire course by asking *why* studying the brain is relevant to AI and provides concrete evidence (from brain-damaged patients) that brain structure and cognitive function are inseparable.
+This lecture introduces the foundational definitions of **neuroscience**, **cognition**, and **cognitive neuroscience**, then explores the key question at the heart of the course: *Is the brain a good model for artificial intelligence?* It also establishes the relationship between **brain structure and function**, using landmark clinical cases and neuroscientific discoveries as evidence.
 
----
-
-## 🎯 Learning Objectives
-
-By the end of this lecture you should be able to:
-
-1. Define **neuroscience**, **cognition**, and **cognitive neuroscience**.
-2. Explain the relationship between neuroscience and AI.
-3. Discuss arguments **for and against** using the human brain as a model for AI.
-4. Describe the different **levels of brain emulation** in AI.
-5. Explain how brain **structure and function** are intimately related.
-6. Explain how cognitive neuroscience bridges the gap between brain structure and the mind.
+> 💡 **TA Note:** This lecture sets the conceptual groundwork for the entire course. If you understand why structure and function are inseparable — and why that matters for AI — you've grasped the central thread of this module.
 
 ---
 
 ## 🔑 Key Concepts
 
 ### Neuroscience
-> **The study of how the nervous system is organized and functions.**
+- **Definition:** The study of how the **nervous system is organized and functions**.
+- A **multidisciplinary science** drawing from:
+  - Physiology, Anatomy, Molecular biology
+  - Developmental biology, Cytology
+  - Computer science, Mathematical modeling
 
-Neuroscience is a **multidisciplinary** science, drawing from:
-- Physiology
-- Anatomy
-- Molecular biology
-- Developmental biology
-- Cytology
-- Computer science
-- Mathematical modeling
+**Levels of investigation in neuroscience:**
 
-**Levels of investigation:**
-
-| Level | What it Studies |
+| Level | Focus |
 |---|---|
 | **Molecular** | Molecular neuroanatomy; mechanisms of molecular signaling in the nervous system |
-| **Cellular** | Neurons at the cellular level — morphology and physiological properties |
-| **Neural circuits & systems** | How circuits are formed and function to generate behaviors (sensory perception, motor reflexes, etc.) |
+| **Cellular** | Study of neurons — morphology and physiological properties |
+| **Neural circuits & systems** | How circuits form and function to generate behaviors (sensory perception, motor actions, etc.) |
 
 ---
 
 ### Cognition
-> **The range of mental processes relating to the acquisition, storage, manipulation, and retrieval of information.**
+- **Definition:** The range of mental processes relating to the **acquisition, storage, manipulation, and retrieval of information**.
 
-Cognition includes multiple processes:
+**Cognitive processes include:**
 
 | Process | Description |
 |---|---|
-| **Perception** | Takes in information from the environment through the senses |
-| **Attention** | Focuses on a specific stimulus in the environment |
-| **Learning** | Manipulates new information and integrates it with prior knowledge |
-| **Memory** | Encodes, stores, and retrieves information; critical for learning |
-| **Action** | Uses perceived information to interact with the environment |
+| **Perception** | Taking in information from the environment through the senses |
+| **Attention** | Focusing on a specific stimulus in the environment |
+| **Learning** | Manipulating new information and integrating it with prior knowledge |
+| **Memory** | Encoding, storing, and retrieving information |
+| **Action** | Using perceived information to interact with the environment |
 | **Language** | Understanding and expressing thoughts through spoken/written words |
 | **Thought / Higher Reasoning** | Decision-making and problem-solving |
 
 ---
 
 ### Cognitive Neuroscience
-> **The interdisciplinary field that studies the neural basis of cognition, seeking to understand how the nervous system gives rise to mental processes.**
 
-It sits at the intersection of:
-- **Neuroscience** (structure)
-- **Cognition** (function)
+> ⚠️ **Exam-Relevant** — Definition frequently asked in exams.
 
-> 💡 **TA Note:** Think of it as the "translation layer" — it asks not just *what* the brain looks like or *what* cognitive tasks humans can do, but *how one gives rise to the other*. This is exactly what AI researchers need to understand if they want to build machines that genuinely replicate intelligent behavior.
+**Definition:** The **interdisciplinary field** that studies the **neural basis of cognition**, seeking to understand how the nervous system gives rise to mental processes.
 
----
+$$\text{Cognitive Neuroscience} = \text{Neuroscience (Structure)} + \text{Cognition (Function)}$$
 
-## 🧠 Why Is This Course in an AI Degree?
+> 💡 **TA Note:** Think of it as the "bridge" discipline — neuroscience gives us the *hardware* map, cognitive science gives us the *software* map, and cognitive neuroscience tries to explain *how the hardware runs the software*.
 
-### Arguments FOR using the brain as a model for AI
+![Cognitive neuroscience venn diagram — structure, function, cognition](images/slide_12_cognitive_neuroscience_venn.png)
 
-**Conceptual / Theoretical:**
-- The human brain is the only existing **proof that general intelligence is possible** at all.
-- Studying animal cognition can provide a window into different aspects of higher-level general intelligence.
-
-**Technical / Mechanistic:**
-- **Functional similarities** exist between biological brains and artificial computations (e.g., the all-or-none firing of neurons ↔ binary computation).
-- Neuroscience can **inspire new types of algorithms and architectures**, independent of or complementary to purely mathematical/logic-based methods.
-- Neuroscience can **validate existing algorithms**: if a known algorithm is found to be implemented in the brain, that gives strong support for its plausibility as part of a general intelligence system.
-
-> 💡 **TA Note:** The relationship is bidirectional — AI also provides insights into how the brain works. This is biomimicry in reverse.
+> 📎 **Image Note:** This image is from **Slide 12** — "Cognitive Neuroscience: Structure + Function + Cognition Venn Diagram". Add the file as `images/slide_12_cognitive_neuroscience_venn.png` in the repo and it will load automatically.
 
 ---
 
-### Arguments AGAINST using the brain as a model for AI
+## 🧠 Is the Brain a Good Model for AI?
+
+This is the central debate of the lecture, discussed in the context of a landmark 2012 *Nature* article celebrating 100 years since Alan Turing's birth:
+
+> Brooks R, Hassabis D, Bray D, Shashua A. *Turing centenary: Is the brain a good model for machine intelligence?* Nature. 2012;482(7386):462–3. doi: [10.1038/482462a](https://doi.org/10.1038/482462a)
+
+---
+
+### ✅ Arguments FOR Using the Brain as a Model
 
 **Conceptual / Theoretical:**
-- Modeling brains and computers on each other may **prevent deeper, novel insights**.
-- From an engineering perspective, *what works is ultimately all that matters* — biological plausibility need not be enforced.
-- We still do **not know the detailed circuitry** of any brain region well enough to reproduce it.
+- The human brain is the **existing proof** that general intelligence is possible at all.
+- Studying animal cognition and its neural implementation provides a window into **different aspects of higher-level general intelligence**.
 
 **Technical / Mechanistic:**
-- Unlike hardware/software, **mind and brain are not distinct entities** — the software *emerges* from the hardware. This cannot be cleanly separated.
-- Neurons transmit information not just through electrical signals but through **subtle biochemical changes**.
-- Neuronal communication operates in **cycles** (recurrent), not linear chains — requiring recurrent components in neural networks (cf. Kar et al., 2019, *Nature Neuroscience*).
-- The brain generalizes from **very few examples**; ML models require vast datasets — a fundamental asymmetry.
+- **Functional similarities** exist between biological brains and artificial computations.
+  - The **"all-or-none" firing** of neurons is analogous to **binary computation** in machines.
+  - *(However, binary abstractions do not capture all the complexity inherent in the brain.)*
+- Neuroscience can **inspire** new types of algorithms and architectures — **independent of** or **complementary to** purely mathematical/logic-based methods.
+- Neuroscience can provide **validation**: a known algorithm found to be implemented in the brain gives strong support for its plausibility as a component of general intelligence.
 
-> ⚠️ **Exam-Relevant** — Be prepared to list and explain 2–3 arguments on *each* side. The exam may ask you to critically analyze the brain-as-model-for-AI debate.
+> 💡 **TA Note:** The canonical example is the **artificial neural network** — directly inspired by the structure of biological neurons. Hebbian learning rules were also directly imported into machine learning.
+
+---
+
+### ❌ Arguments AGAINST Using the Brain as a Model
+
+**Conceptual / Theoretical:**
+- Modeling brains and computers on each other creates **circular thinking** that may prevent deeper novel insights.
+- From an **engineering perspective**, what works is what matters — we need not enforce biological plausibility.
+- We still **do not know** the detailed circuitry of any brain region well enough to reproduce it faithfully.
+
+**Technical / Mechanistic:**
+
+| Brain | Computer |
+|---|---|
+| Mind and brain are **not distinct entities** | Hardware and software are separable |
+| "Software" (cognition) **emerges from** hardware (structure) | Software is programmed independently |
+| Neurons use **biochemical signals**, not just electrical | Digital computation uses binary electrical signals |
+| Communication occurs in **cycles** (recurrent), not linear chains | Classical architectures are feedforward/linear |
+| **Limited memory capacity**, yet excellent at generalizing | Requires **vast memory** (large datasets) to generalize via statistical learning |
+
+> 💡 **TA Note:** The point about **recurrent connections** is particularly relevant to AI — it directly motivated the design of **Recurrent Neural Networks (RNNs)** and attention mechanisms in Transformers, which attempt to mimic the feedback loops observed in biological neural circuits.
+> 
+> Reference: Kar et al. (2019), *Nature Neuroscience* — evidence that recurrent circuits are critical to object recognition in the ventral stream.
+
+---
+
+### 🔄 Biomimicry
+
+**Definition:** The emulation of models, systems, and elements of nature to solve complex human problems.
+
+Living organisms have evolved well-adapted structures over geological time through natural selection — and these can serve as inspiration for engineering solutions.
+
+---
+
+### 🔁 The Two-Way Street
+
+> ⚠️ **Exam-Relevant** — The bidirectional relationship between AI and neuroscience.
+
+- Not only can **neuroscience inspire AI**, but **AI can also provide insights into how brains function**.
+- The two disciplines are mutually informing.
 
 ---
 
 ## 🏗️ Levels of Brain Emulation in AI
 
-| Approach | Focus | Example |
-|---|---|---|
-| **Structure-focused** | Closely mimic or reverse-engineer specific neural circuits | **Blue Brain Project** (Markram, 2006) — biologically detailed digital reconstruction of the mouse brain |
-| **Function-focused** | Mimic computational/algorithmic levels of neural systems | **DeepMind** (Hassabis, Legg, 2010) — systems neuroscience-level understanding; algorithms, architectures, representations |
+> ⚠️ **Exam-Relevant** — Know the two levels and their representative projects.
 
-> ⚠️ **Exam-Relevant** — Know the difference between structure-level and function-level emulation and be able to give an example of each.
+| Level | Approach | Example Project |
+|---|---|---|
+| **Structure** | Closely mimic or reverse-engineer the specifics of neural circuits | **Blue Brain Project** (Markram, 2006) — biologically detailed digital reconstructions of the mouse brain |
+| **Function** | Mimic the computational/algorithmic level of neural systems | **DeepMind** (Hassabis & Legg, 2010) — general-purpose AI based on systems-level understanding of the brain |
+
+> 💡 **TA Note:** Structure-level emulation is about *building a digital copy* of the brain; function-level emulation is about *capturing what the brain does algorithmically*, without necessarily replicating its biological substrate.
 
 ---
 
-## 🏛️ Brain Structure & Function Are Intimately Related
+## 🔬 Structure and Function: The Evidence
 
-> **Cognitive functions emerge from the structure of the nervous system.**
+**Core claim:** *Structure and function are intimately related in the nervous system. Cognitive functions emerge from the structure of the nervous system.*
 
-### The Brain: 6 Subdivisions
+**How do we know this?** — Through the study of **brain lesions**.
+
+### Brain Lesion Studies
+
+- **Focal brain damage** causes specific cognitive and behavioral deficits.
+- Types of lesions studied:
+  - *Naturally occurring:* tumors, strokes, degenerative diseases
+  - *Surgically induced:* to treat epilepsy (Montreal procedure)
+  - *Experimentally caused:* only in animals
+
+> ⚠️ **Exam-Relevant** — Brain lesions provide **causal evidence** on the relation between structure and function — they show which region is *necessary* for a given behavior.
+
+---
+
+## 🧩 Brain Structure
+
+### Overview of the Brain's 6 Subdivisions
+
+The brain is composed of the following subdivisions, largely symmetrical along the midline:
 
 1. **Medulla** — Brainstem
 2. **Pons** — Brainstem
 3. **Midbrain** — Brainstem
 4. **Cerebellum**
-5. **Diencephalon** (thalamus & hypothalamus)
-6. **Telencephalon** (cerebral hemispheres) — the largest part of the human brain
+5. **Diencephalon** — Thalamus & Hypothalamus
+6. **Telencephalon** — Cerebral Hemispheres
 
-### The Telencephalon
-Consists of:
+---
+
+### The Telencephalon (Cerebral Hemispheres)
+
+The **largest part** of the human brain. Consists of:
 - **Cerebral cortex** — grey matter (neuronal cell bodies)
 - **White matter** — axons and glial cells
-- Three deep structures: **Basal ganglia**, **Amygdala**, **Hippocampus**
-
-### The Cerebral Cortex
-- Two symmetrical hemispheres connected by the **corpus callosum**
-- Divided into **4 lobes** distinguished by prominent sulci (grooves)
-- Cognitive systems are organized as **hierarchical networks** spanning multiple lobes (primary → secondary → tertiary areas)
+- **Three deep-lying structures** regulating cortical activity:
+  - **Basal ganglia**
+  - **Amygdala**
+  - **Hippocampus**
 
 ---
 
-## 🧩 Evidence: Structure Determines Function
+### Cerebral Cortex
 
-### Method: Brain Lesion Studies
-Focal brain damage causes **specific cognitive and behavioral deficits**.
-
-**Types of lesions:**
-- Naturally occurring (tumor, stroke, degenerative disease)
-- Surgically induced (to treat epilepsy — the **Montreal procedure**)
-- Experimentally caused (animals only)
-
-> **Key principle:** Brain lesions provide **causal evidence** on the relation between structure and function. They identify which region is *necessary* for a given behavior.
+- Two symmetrical **hemispheres** connected via the **corpus callosum**
+- Divided into **4 lobes** separated by prominent sulci
+- Lobes have **variety of functional roles** in neural processing
+- Cognitive brain systems are composed of **distributed networks** across lobes
+- Each functional system is **hierarchically organized**:
+  - Areas designated as **primary, secondary, or tertiary** based on their sequence in the processing pathway
 
 ---
 
-### Case Study: Split-Brain & Hemispheric Specialization
+## 🔄 Split Brains & Hemispheric Specialization
 
-- The two hemispheres are connected via the **corpus callosum** (largest white matter structure in the brain).
-- Sensory and motor activities on one side of the body are mediated by the **contralateral** (opposite) hemisphere.
-- Most CNS pathways **cross over** to the contralateral side.
-- In healthy individuals, information from both hemispheres is **integrated** via the corpus callosum.
-- In **split-brain patients** (corpus callosum severed), this integration is impaired, **revealing hemispheric specialization**.
+> ⚠️ **Exam-Relevant** — Classic topic on structure–function relationships.
 
-> 💡 **TA Note:** This is a profound insight — by *breaking* the connection, researchers could see what *each side* does independently. It's a natural experiment revealing modularity of brain function.
+### The Corpus Callosum
+- The **largest white matter structure** in the brain
+- Primary communication highway between the two hemispheres
+- *Callosotomy* (surgical severing) = "split-brain" patients
 
----
+### Key Facts on Lateralization
 
-### Language and the Left Hemisphere
+- Sensory and motor activities on **one side of the body** are mediated by the **contralateral hemisphere**
+- Most CNS pathways **cross over** (decussate) to the opposite side
+  - Visual, somatosensory, and motor pathways are highly lateralized
+  - Auditory and olfactory systems are **less lateralized**
+- In healthy individuals, information from both hemispheres is **integrated** via the corpus callosum into a unified representation
 
-> ⚠️ **Exam-Relevant** — The double dissociation between Broca's and Wernicke's aphasia is a classic exam topic.
-
-**Broca's Area** (left inferior frontal lobe):
-- Discovered by **Paul Broca (1861)** via patient "Tan"
-- Damage → **Expressive (Broca's) aphasia**:
-  - Impaired language *production* (non-fluent)
-  - Preserved language *comprehension*
-  - Patient is aware of their deficits
-
-**Wernicke's Area** (left superior temporal gyrus):
-- Discovered by **Carl Wernicke (1876)**
-- Damage → **Receptive (Wernicke's) aphasia**:
-  - Impaired language *comprehension*
-  - Fluent but *nonsensical* speech production
-  - Patient often unaware of errors
-
-**Double Dissociation:**
-
-| Patient Group | Task X (Production) | Task Y (Comprehension) |
-|---|---|---|
-| Broca's lesion | ❌ Impaired | ✅ Preserved |
-| Wernicke's lesion | ✅ Preserved (but jumbled) | ❌ Impaired |
-
-> 💡 **TA Note:** A **double dissociation** is the gold standard for proving two cognitive functions are implemented by *distinct* neural substrates. If damaging area A impairs task X but not Y, and damaging area B impairs Y but not X — the two tasks are neurally separable.
+### Split-Brain Patients
+- Inter-hemispheric communication is **impaired** → reveals each hemisphere's independent specializations
+- Under controlled experimental conditions, each hemisphere can be probed independently
 
 ---
 
-### The Montreal Procedure & Penfield's Maps
+## 🗣️ Language & the Left Hemisphere
 
-- **Wilder Penfield (1891–1976)**: Treated epilepsy by surgically destroying seizure-producing neurons.
-- He electrically stimulated brain areas during awake surgery, observing responses to map the **sensory and motor cortices** (Penfield & Jasper, 1954).
-- **Donald Hebb (1904–1985)**: Proposed that learning has a biological basis — *"cells that fire together, wire together."* Hebb's theory directly inspired **artificial neural networks**.
+> ⚠️ **Exam-Relevant** — Broca's Area, Wernicke's Area, and double dissociation.
 
-> ⚠️ **Exam-Relevant** — Hebb's rule is foundational to how ANNs learn. Know the basic principle.
+### Left Hemisphere Dominance for Language
+- Language and speech reside primarily in **one hemisphere** (almost never both)
+- The **left hemisphere** is dominant for speech production in **~96% of people**
+- In split-brain patients, speech is produced from the left hemisphere
+- A small number of documented cases show residual right-hemisphere language capacity (restricted to **lexical comprehension** — the mind's "dictionary")
+
+### Broca's Area — Expressive Aphasia
+
+| | |
+|---|---|
+| **Who** | Paul Broca, 1861 — patient "Tan" |
+| **Lesion location** | Left **inferior frontal lobe** |
+| **Deficit** | **Impaired language production** (non-fluent/agrammatic aphasia) |
+| **Preserved** | Language comprehension |
+| **Patient awareness** | Usually aware of their deficit |
+
+### Wernicke's Area — Receptive Aphasia
+
+| | |
+|---|---|
+| **Who** | Carl Wernicke, 1876 |
+| **Lesion location** | Left **superior temporal gyrus** |
+| **Deficit** | **Impaired language comprehension** |
+| **Preserved** | Fluent speech — but content is nonsensical (fluent aphasia) |
+| **Patient awareness** | Often unaware of incorrect productions |
+
+### Double Dissociation
+
+> ⚠️ **Exam-Relevant** — Definition and example must be mastered.
+
+**Definition:** Patient/group 1 is impaired on Task X (but not Y) **AND** patient/group 2 is impaired on Task Y (but not X).
+
+This is the gold-standard evidence for two **distinct, separable cognitive processes**.
+
+| Patient Type | Lesion | Impaired | Preserved |
+|---|---|---|---|
+| Broca's aphasia | Left inferior frontal lobe | Language **production** | Language comprehension |
+| Wernicke's aphasia | Left temporal lobe | Language **comprehension** | Language production (jumbled) |
+
+> 💡 **TA Note:** Double dissociation is crucial because a *single dissociation* could be explained by one process being just "harder" than another. Double dissociation proves functional independence.
 
 ---
 
-### Case Study: Patient H.M. & The Hippocampus
+## 🔧 Surgical Lesions: The Montreal Procedure
 
-- **H.M.** had his **medial temporal lobes** (including the hippocampus) surgically removed to treat severe epilepsy.
-- **Brenda Milner** studied him and found:
-  - ❌ Could **not** form new long-term declarative memories (**anterograde amnesia**)
-  - ✅ Normal **short-term memory**
-  - ✅ Normal **procedural memory** (could learn motor skills, but couldn't *remember* learning them)
+### Wilder Penfield (1891–1976)
+- Developed the **Montreal procedure** to treat epilepsy: surgically destroyed seizure-producing neurons
+- Used **electrical stimulation** of the brain while patients were awake → mapped responses
+- Created **somatosensory and motor cortex maps** (Penfield & Jasper, 1954)
 
-**Conclusion:**
-- Memory is **not** a unitary system.
-- The **medial temporal lobe** (hippocampus) is necessary for forming new **long-term declarative memories** and transferring short-term to long-term.
-- It is **not** necessary for procedural/motor learning.
+### Donald O. Hebb (1904–1985)
+- Worked with Penfield studying surgery's effects on the brain
+- Core belief: *psychology and biology cannot be separated*
+- Famous principle: **"Cells that fire together, wire together"**
+  - Neurons that activate together form stronger connections → **Hebbian plasticity**
+  - This principle was directly used in the design of **artificial neural networks**
 
-> 💡 **TA Note:** This was revolutionary — before H.M., it was assumed memory was inseparable from general intelligence. H.M. showed they are dissociable, and that different memory types have *different anatomical substrates*.
+> ⚠️ **Exam-Relevant** — Hebbian learning as a bridge between neuroscience and AI.
 
 ---
 
-## 📐 Memory Systems
+## 🧠 The Hippocampus & Memory: Patient H.M.
+
+> ⚠️ **Exam-Relevant** — H.M.'s case is foundational for understanding memory systems.
+
+### Background
+- **Brenda Milner** (1918–) worked with Penfield's surgical patients
+- Patients complained of mild memory loss post-surgery
+- Milner showed the **extent of memory deficit depended on how much of the medial temporal lobe** was removed
+
+### What H.M. Taught Us
+
+**H.M. had bilateral removal of his medial temporal lobes (including hippocampus).**
+
+| Memory Type | Outcome in H.M. |
+|---|---|
+| New long-term memories | ❌ Could NOT form (anterograde amnesia) |
+| Short-term memory | ✅ Normal |
+| Procedural memory (motor skills) | ✅ Could learn new skills (e.g., mirror drawing) |
+| Memory of *practicing* the skill | ❌ Could NOT remember |
+
+**Key conclusions:**
+- Memory is **separable** from perception and intellectual functions (which remained intact in H.M.)
+- The **medial temporal lobes** are necessary for:
+  - Forming long-term (declarative) memories
+  - Transferring information from short-term to long-term memory
+- The medial temporal lobes are **NOT necessary** for:
+  - Short-term memory retention
+  - Procedural/motor learning
+
+> 💡 **TA Note:** H.M. demonstrated a **dissociation between explicit memory** (consciously remembering *that* you learned something) and **implicit/procedural memory** (the actual learned skill). This is the first clean experimental evidence for **multiple memory systems** — each with different neural substrates.
+
+---
+
+## 💾 Memory Systems
 
 ### Definition
-> **Memory** = The process of encoding, storage, and retrieval of information.
-> **Learning** = Acquiring new information; memory is the outcome of learning.
+> **Memory:** The process of encoding, storage, and retrieval of information.
+
+*Learning* = acquiring new information; *Memory* = the outcome of learning. They are deeply intertwined.
 
 ### Basic Steps of Memory Processing
 
-1. **Encoding** — Processing incoming information to create memory traces:
-   - *Acquisition*: Sensory stimuli enter short-term memory.
-   - *Consolidation*: Stabilization over time (days to years) → long-term memory.
-2. **Storage** — "Permanently" recording the information.
-3. **Retrieval** — Accessing stored information to create a conscious representation or execute a learned behavior.
+1. **Encoding** — Processing of incoming information creating memory traces:
+   - *Acquisition:* Sensory stimuli enter short-term memory
+   - *Consolidation:* Stabilization over time (days to months/years) → long-term memory
+2. **Storage** — "Permanently" recording the information
+3. **Retrieval** — Accessing stored information to form a conscious representation or execute a learned behavior
 
-### Neural Plasticity
-> Neural connections can be **modified by experience and learning**.
+![Overview of memory systems](images/slide_72_memory_overview.png)
 
-- **Short-term changes**: Functional/physiological changes (seconds to hours) — increase or decrease effectiveness of existing synaptic connections (*Hebbian plasticity*).
-- **Long-term changes**: Structural changes (days) — anatomical alterations including pruning or growth of synapses.
+> 📎 **Image Note:** This image is from **Slide 72–73** — "An Overview of Memory". Add the file as `images/slide_72_memory_overview.png` in the repo and it will load automatically.
+
+### Neural Plasticity and Memory
+
+> ⚠️ **Exam-Relevant** — Plasticity mechanisms underlie all forms of memory.
+
+**Plasticity:** Neural connections can be modified by experience and learning.
+
+| Type | Nature | Duration |
+|---|---|---|
+| **Short-term plasticity** (Hebbian) | Functional/physiological changes — increase/decrease synaptic effectiveness | Seconds to hours |
+| **Long-term plasticity** | Structural changes — pruning of existing synapses or growth of new ones | Days and beyond |
 
 ---
 
-### Case Study: Phineas Gage & the vmPFC
+## 🧩 The Frontal Lobe & Higher Cognition
 
-- **Phineas Gage (1848)**: A railroad worker whose left frontal lobe was destroyed by an iron rod — he survived but his *personality changed dramatically*.
-- Implicated the **ventromedial prefrontal cortex (vmPFC)** in **cognitive/affective control** and decision-making.
-- The **orbitofrontal cortex** (most ventral part of vmPFC) lies above the bony orbits of the eyes.
+### Ventromedial Prefrontal Cortex (vmPFC)
+- Part of the **prefrontal cortex**
+- Crucial for **cognitive/affective control**
+- The most ventral part is the **orbitofrontal cortex** (above the bony orbits of the eyes)
 
-### Case Study: Hemispatial Neglect & the Parietal Lobe
+### Patient Phineas Gage (1823–1860)
 
-- **Hemispatial neglect**: A disorder of attention; patients ignore one side of the world.
-- Most common after lesion to the **right parietal lobe** → left-sided neglect.
-- Symptoms: Poor spatial awareness, impaired attention to environment, difficulty interpreting visual scenes as a whole.
+September 13, 1848 — a railway construction accident drove an iron rod through Gage's skull, destroying his vmPFC while leaving him physically alive.
+
+**Outcome:**
+- Dramatic **personality changes** — previously responsible and socially adept, Gage became impulsive, irreverent, and unable to make sound decisions
+- Perception and intellect were largely **preserved**
+- Case became landmark evidence that the **frontal lobe is involved in personality, social behavior, and decision-making**
+
+![Phineas Gage skull diagram](images/slide_79_phineas_gage.png)
+
+> 📎 **Image Note:** This image is from **Slide 79** — "Patient Phineas Gage". Add the file as `images/slide_79_phineas_gage.png` in the repo and it will load automatically.
+
+---
+
+## 👁️ The Parietal Lobe & Attention: Hemispatial Neglect
+
+- **Hemispatial neglect:** A disorder of attention — patients systematically ignore one half of the world
+- Most commonly caused by lesion to the **right parietal lobe** → **left-sided neglect**
+- Symptoms:
+  - Poor spatial awareness on the neglected side
+  - Impaired attention to environment
+  - Difficulty interpreting visual scenes as a whole
+
+> 💡 **TA Note:** This is a spectacular example of structure–function correspondence: damage a specific parietal region → lose attention to an entire half of space. It also suggests that **attention** is not purely a top-down volitional process but depends on dedicated neural substrates.
+
+---
+
+## 🖼️ Figures & Diagrams
+
+![Brain subdivisions diagram](images/slide_46_brain_subdivisions.png)
+
+> 📎 **Image Note:** This image is from **Slide 46** — "The Brain: 6 Subdivisions". Add the file as `images/slide_46_brain_subdivisions.png` in the repo and it will load automatically.
+
+![Visual, somatosensory, and motor pathways lateralization](images/slide_52_hemispheric_pathways.png)
+
+> 📎 **Image Note:** This image is from **Slide 52** — "Hemispheric Specialization Pathways". Add the file as `images/slide_52_hemispheric_pathways.png` in the repo and it will load automatically.
+
+![Memory encoding storage retrieval diagram](images/slide_74_memory_steps.png)
+
+> 📎 **Image Note:** This image is from **Slide 74** — "Basic Steps of Memory Processing". Add the file as `images/slide_74_memory_steps.png` in the repo and it will load automatically.
 
 ---
 
 ## ⚠️ Exam-Relevant Topics
 
-| Topic | What to Know |
-|---|---|
-| **Brain as AI model** | 2–3 arguments for AND against; reference the Nature 2012 paper by Brooks, Hassabis et al. |
-| **Levels of brain emulation** | Structure-level (Blue Brain) vs. Function-level (DeepMind) |
-| **Double dissociation** | Definition + example (Broca's vs. Wernicke's aphasia) |
-| **Hebb's rule** | "Cells that fire together, wire together" — basis of ANN learning |
-| **H.M. case study** | What it proves about multiple memory systems and the hippocampus |
-| **Broca's vs. Wernicke's aphasia** | Symptoms, lesion location, type of deficit |
-| **Hemispheric specialization** | Left hemisphere dominant for language (96% of people); split-brain evidence |
-| **Neural plasticity** | Short-term vs. long-term; Hebbian plasticity |
-
----
-
-## 📝 Summary
-
-- **Neuroscience** studies the structure and function of the nervous system at multiple levels (molecular → cellular → systems).
-- **Cognition** is the full range of mental processes for acquiring, storing, manipulating, and retrieving information.
-- **Cognitive neuroscience** bridges the two: it asks how brain structure gives rise to cognitive function.
-- The brain is a useful but **imperfect** model for AI — it proves general intelligence is possible, but differs from computers in fundamental ways (no hardware/software separation, biochemical signaling, recurrent communication, few-shot generalization).
-- Two levels of AI brain emulation exist: **structure-focused** (Blue Brain) and **function-focused** (DeepMind).
-- Brain lesion studies provide **causal evidence** linking structure to function — key examples include split-brain patients, Broca's and Wernicke's aphasia, Patient H.M., Phineas Gage, and hemispatial neglect.
-- **Hebb's rule** ("cells that fire together, wire together") directly inspired artificial neural network design.
-- Memory is **not unitary**: H.M. demonstrated that declarative and procedural memory systems are neurally dissociable.
+- **Define cognitive neuroscience** and explain how it bridges neuroscience and cognition (Slides 7–12)
+- **Brain as a model for AI** — know both sides of the argument; be ready to give 2–3 points each way (Slides 18–32)
+- **Levels of brain emulation in AI** — Blue Brain Project (structure) vs DeepMind (function) (Slide 33)
+- **Double dissociation** — definition and the Broca/Wernicke example (Slides 59–63)
+- **Hebbian plasticity** — "cells that fire together, wire together" and its link to ANNs (Slide 66)
+- **Patient H.M.** — what his case proves about multiple memory systems and the role of the hippocampus (Slides 67–70)
+- **Brain lesions as causal evidence** — why lesion studies are methodologically important (Slides 43, 86–88)
+- **Hemispatial neglect** — parietal lobe and attention (Slides 82–83)
+- **Revision questions from Slide 96** — these are exam-style questions:
+  1. Analyze the relationship between neuroscience and AI. To what extent is the brain a good model for machine intelligence?
+  2. Choose an example from cognitive neuroscience to illustrate that cognition directly emerges from brain structure.
 
 ---
 
 ## 📚 Recommended Readings
 
-- Brooks R, Hassabis D, Bray D, Shashua A. *Turing centenary: Is the brain a good model for machine intelligence?* Nature. 2012 Feb 22;482(7386):462-3. doi: [10.1038/482462a](https://doi.org/10.1038/482462a)
+- Brooks R, Hassabis D, Bray D, Shashua A. *Turing centenary: Is the brain a good model for machine intelligence?* Nature. 2012;482(7386):462–3. doi: [10.1038/482462a](https://doi.org/10.1038/482462a)
 - Gazzaniga, Ivry, Magnum. *Cognitive Neuroscience: The Biology of the Mind*
-  - Chapter 4 – Hemispheric Specialization
-  - Chapter 9 – Memory
+  - **Chapter 4** — Hemispheric Specialization
+  - **Chapter 9** — Memory
 
 ---
 
-## 🔁 Revision Questions
+## 📝 Summary
 
-1. **Analyze the relationship between neuroscience and AI.** To what extent is the brain a good model for machine intelligence, and what are the potential benefits and limitations?
-2. **Structure and function are intimately related in the nervous system.** Choose one example from cognitive neuroscience to illustrate that cognition directly emerges from nervous system structure.
+- **Neuroscience** = study of nervous system structure and function; **Cognition** = mental processes for handling information; **Cognitive Neuroscience** = the bridge between the two.
+- The brain is a **double-edged model** for AI: it provides proof-of-concept for general intelligence and inspires algorithms, but differs fundamentally from computers in its substrate, recurrence, and memory architecture.
+- Two levels of brain emulation in AI: **structural** (Blue Brain) and **functional** (DeepMind).
+- **Structure and function are inseparable** in the nervous system — every cognitive function has a neural correlate.
+- Key evidence comes from **lesion studies**: Broca/Wernicke aphasia (language), H.M. (memory), Phineas Gage (decision-making), hemispatial neglect (attention).
+- **Hebbian plasticity** ("cells that fire together, wire together") is the biological basis of learning and directly inspired artificial neural network design.
+- Memory is not monolithic: the hippocampus supports **declarative long-term memory** but not procedural learning — multiple systems, multiple substrates.
