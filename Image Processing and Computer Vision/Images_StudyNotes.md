@@ -54,6 +54,10 @@ The **pinhole camera** is the simplest imaging device: light passes through a ti
 
 ## 3. Perspective Projection
 
+Prespective Projection Explained in Video:
+Part 1: https://www.youtube.com/watch?v=F5WA26W4JaM
+Part 2: https://www.youtube.com/watch?v=g7Pb8mrwcJ0
+
 The geometric model of image formation in a pinhole camera is called **Perspective Projection**.
 
 ### Key Terminology
