@@ -31,6 +31,8 @@ $$\frac{\partial f}{\partial x_i} = \lim_{h \to 0} \frac{f(x_1, \ldots, x_i + h,
 
 > ⚠️ **Exam Tip:** When computing a partial derivative with respect to $x_i$, treat all other variables as constants.
 
+🧭 **Exam Priority: HIGH** — partial derivatives are foundational and frequently tested.
+
 **Example:** Given $f(x_1, x_2) = x_1^2 + x_1 x_2$:
 
 $$\frac{\partial f}{\partial x_1} = 2x_1 + x_2, \quad \frac{\partial f}{\partial x_2} = x_1$$
@@ -58,6 +60,8 @@ For $f: \mathbb{R}^n \to \mathbb{R}$, the **gradient** is a row vector:
 $$\nabla_x f = \left[ \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \ldots, \frac{\partial f}{\partial x_n} \right] \in \mathbb{R}^{1 \times n}$$
 
 > ⚠️ **Exam Tip:** The gradient points in the direction of steepest ascent of $f$. This is crucial for optimization (gradient descent moves opposite to the gradient).
+
+🧭 **Exam Priority: HIGH** — know how to compute a gradient and evaluate it at a point.
 
 > 💡 **Additional Context (from assistant):** Think of the gradient like a "slope compass" in multiple dimensions. In 2D, you might have a hill — the gradient at any point tells you in which direction the hill rises most steeply.
 
@@ -91,6 +95,8 @@ For composed functions $f \circ \mathbf{x}$ where $f: \mathbb{R}^n \to \mathbb{R
 $$\frac{d(f \circ \mathbf{x})}{dt} = \frac{\partial f}{\partial x_1} \frac{dx_1}{dt} + \frac{\partial f}{\partial x_2} \frac{dx_2}{dt} = \nabla_x f \cdot \dot{\mathbf{x}}(t)$$
 
 > ⚠️ **Exam Tip:** The chain rule is the backbone of backpropagation in neural networks. Know this cold.
+
+🧭 **Exam Priority: HIGH** — chain-rule computations often appear in both calculus and ML-style questions.
 
 **Example:** $f(x_1, x_2) = x_1^2 + 2x_2$, with $\mathbf{x}(t) = (\sin(t), \cos(t))$:
 
@@ -137,6 +143,8 @@ $$J = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} = \begin{bmatrix}
 
 > ⚠️ **Exam Tip:** The Jacobian generalizes the derivative to vector-valued functions. Know its dimensions: $m \times n$ (outputs × inputs).
 
+🧭 **Exam Priority: HIGH** — dimensions and construction of the Jacobian are common exam targets.
+
 **Example:** $f: \mathbb{R}^2 \to \mathbb{R}^3$ with
 
 $$f(x_1, x_2) = \begin{bmatrix} 2x_2 + x_1 \\ x_2 \\ x_1 \end{bmatrix}$$
@@ -173,6 +181,8 @@ $$\frac{\partial(f \circ g)}{\partial \mathbf{x}} = \underbrace{\frac{\partial f
 
 > ⚠️ **Exam Tip:** Always check matrix dimensions match when applying the chain rule in composed functions. The middle dimension must cancel.
 
+🧭 **Exam Priority: HIGH** — a fast exam check is verifying dimension consistency before multiplying.
+
 ---
 
 ## 6. Least-Squares Loss and Gradient Derivation
@@ -198,6 +208,8 @@ $$\nabla_\theta L = \frac{\partial L}{\partial e} \cdot \frac{\partial e}{\parti
 $$= -2y^\top \Phi + 2\theta^\top \Phi^\top \Phi$$
 
 > ⚠️ **Exam Tip:** This derivation is often asked in exams. The final gradient $\nabla_\theta L = 2(\Phi^\top \Phi \theta - \Phi^\top y)$ leads to the **normal equations** $\Phi^\top \Phi \theta = \Phi^\top y$ when set to zero.
+
+🧭 **Exam Priority: HIGH** — this derivation directly connects to normal equations and closed-form least squares.
 
 > 💡 **Additional Context (from assistant):** Setting $\nabla_\theta L = 0$ gives the closed-form ordinary least-squares solution $\hat{\theta} = (\Phi^\top \Phi)^{-1} \Phi^\top y$, assuming $\Phi^\top \Phi$ is invertible.
 
@@ -234,6 +246,8 @@ $$H = \nabla^2 f = \begin{bmatrix}
 > - $H$ positive definite → local minimum
 > - $H$ negative definite → local maximum
 > - $H$ indefinite → saddle point
+
+🧭 **Exam Priority: HIGH** — classification via Hessian definiteness is a classic exam question.
 
 **Example:** $f(x, y) = x^2 + 2xy + y^3$:
 
@@ -299,12 +313,16 @@ For $k = 0, 1, 2, 3$ and $\delta = x - x_0$:
 
 > ⚠️ **Exam Tip:** The second-order term involves the **Hessian**: $\frac{1}{2}\delta^\top H \delta$. This is the most tested term after the linear one.
 
+🧭 **Exam Priority: HIGH** — remember the exact second-order term form.
+
 ### 8.5 Outer Products and Tensor Notation
 
 The $k$-fold outer product $\delta^k = \underbrace{\delta \otimes \cdots \otimes \delta}_{k}$ has dimensions $\mathbb{R}^{D \times D \times \cdots \times D}$ ($k$ times).
 
 - $\delta^2 = \delta\delta^\top \in \mathbb{R}^{D \times D}$: a matrix
 - $\delta^3 \in \mathbb{R}^{D \times D \times D}$: a third-order tensor
+
+🧭 **Exam Priority: LOW** — useful for deeper understanding, but usually less tested than gradient/Jacobian/Hessian basics.
 
 ![Outer product visualization: (a) two vectors → matrix; (b) three vectors → tensor](https://images/slide_ch5_figure_5_13_outer_products.png)
 > 📌 **Note:** This image is located on **Slide 5.13** of the provided slides (figure title: "Visualizing outer products"). Please place the file as `images/slide_ch5_figure_5_13_outer_products.png` in the same GitHub repository — it will load automatically once added.
@@ -336,6 +354,8 @@ $$\text{Term}_3 = \frac{6}{6}(y-2)^3 = (y-2)^3$$
 $$f(x,y) = 13 + 6(x-1) + 14(y-2) + (x-1)^2 + 2(x-1)(y-2) + 6(y-2)^2 + (y-2)^3$$
 
 > ⚠️ **Exam Tip:** For a degree-$d$ polynomial, the Taylor series is exact at order $d$ — no approximation. This is a key insight to mention in exams.
+
+🧭 **Exam Priority: MEDIUM-HIGH** — often asked as a short conceptual question.
 
 **Additional Examples:**
 
@@ -415,6 +435,8 @@ L = ½(ŷ - y)² = ½(-9 - 4)² = ½·169 = 84.5
 
 > ⚠️ **Exam Tip:** Backpropagation is just the chain rule applied recursively from the output back to the inputs. Always go layer by layer, computing $\frac{\partial L}{\partial \text{layer output}}$ before $\frac{\partial L}{\partial \text{layer parameters}}$.
 
+🧭 **Exam Priority: HIGH** — be able to do one full forward pass and one backward pass numerically.
+
 **Additional Examples — Backprop:**
 
 1. **Different activation (sigmoid):** If $h = \sigma(z^{(1)}) = \frac{1}{1+e^{-z^{(1)}}}$, then $\frac{\partial h}{\partial z^{(1)}} = h(1-h)$.
@@ -428,6 +450,8 @@ L = ½(ŷ - y)² = ½(-9 - 4)² = ½·169 = 84.5
 ---
 
 ## 10. Further Reading and Applications
+
+🧭 **Exam Priority: LOW-MEDIUM** — usually less central than core derivative/Jacobian/Hessian computations, but useful for theory/context questions.
 
 ### 10.1 Taylor Series in Machine Learning
 
@@ -459,8 +483,17 @@ This linearizes $f$, and for a Gaussian $p(x)$, the mean and covariance can then
 - $u = \log(x^4) = 4\log(x)$, so $u' = \frac{4}{x}$
 - $v = \sin(x^3)$, so $v' = 3x^2 \cos(x^3)$
 
+**Step-by-step (simplified):**
+
+1. Split the function into two factors: $u=\log(x^4)$ and $v=\sin(x^3)$.
+2. Differentiate each factor: $u'=\frac{4}{x}$ and $v'=3x^2\cos(x^3)$.
+3. Apply product rule: $f'=u'v+uv'$.
+4. Substitute and simplify.
+
 $$f'(x) = \frac{4}{x}\sin(x^3) + 4\log(x) \cdot 3x^2\cos(x^3)$$
 $$= \frac{4\sin(x^3)}{x} + 12x^2 \log(x)\cos(x^3)$$
+
+🧭 **Exam Priority: HIGH** — this type mixes product rule + chain rule and is very exam-like.
 
 **Additional Examples:**
 
@@ -479,13 +512,20 @@ $$= \frac{4\sin(x^3)}{x} + 12x^2 \log(x)\cos(x^3)$$
 
 Using the quotient rule or chain rule:
 
+**Step-by-step (simplified):**
+
+1. Start from $f(x)=\frac{1}{1+e^{-x}}$.
+2. Differentiate once:
+
 $$f'(x) = \frac{e^{-x}}{(1 + e^{-x})^2}$$
 
-Rewrite cleverly:
+3. Rewrite in terms of $f(x)$:
 
 $$f'(x) = \frac{1}{1+e^{-x}} \cdot \frac{e^{-x}}{1+e^{-x}} = f(x) \cdot (1 - f(x))$$
 
 > ⚠️ **Exam Tip:** $\sigma'(x) = \sigma(x)(1 - \sigma(x))$ is the most elegant and commonly used form. Memorize it — it appears everywhere in logistic regression and neural networks.
+
+🧭 **Exam Priority: HIGH** — this identity is frequently used directly in exam solutions.
 
 **Additional Examples:**
 
@@ -504,7 +544,16 @@ $$f'(x) = \frac{1}{1+e^{-x}} \cdot \frac{e^{-x}}{1+e^{-x}} = f(x) \cdot (1 - f(x
 
 Using the chain rule with $u = -\frac{(x-\mu)^2}{2\sigma^2}$:
 
+**Step-by-step (simplified):**
+
+1. Define the inside function: $u = -\frac{(x-\mu)^2}{2\sigma^2}$.
+2. Differentiate the outside function $e^u$: derivative is $e^u\cdot u'$.
+3. Differentiate the inside function: $u'=-\frac{x-\mu}{\sigma^2}$.
+4. Multiply outside and inside derivatives.
+
 $$f'(x) = e^u \cdot u' = f(x) \cdot \left(-\frac{2(x-\mu)}{2\sigma^2}\right) = -\frac{x-\mu}{\sigma^2} f(x)$$
+
+🧭 **Exam Priority: MEDIUM-HIGH** — common in Gaussian-model and gradient calculations.
 
 > 💡 **Additional Context (from assistant):** This is the derivative of the Gaussian density (unnormalized). Notice it equals zero at $x = \mu$ (the peak), negative for $x > \mu$ (decreasing), and positive for $x < \mu$ (increasing).
 
@@ -563,6 +612,8 @@ $$\frac{\partial (xx^\top)_{ij}}{\partial x_k} = \delta_{ik}x_j + x_i \delta_{jk
 
 **Q1. ⚠️ What is a partial derivative? How is it computed?**
 
+🧭 **Exam Priority: HIGH**
+
 A partial derivative $\frac{\partial f}{\partial x_i}$ measures the rate of change of $f$ with respect to $x_i$, keeping all other variables constant. Computed by treating all other variables as constants and differentiating normally.
 
 *Example:* $f(x_1, x_2) = x_1^2 + x_1 x_2 \Rightarrow \frac{\partial f}{\partial x_1} = 2x_1 + x_2$
@@ -571,11 +622,15 @@ A partial derivative $\frac{\partial f}{\partial x_i}$ measures the rate of chan
 
 **Q2. What is the gradient $\nabla f$? What are its dimensions?**
 
+🧭 **Exam Priority: HIGH**
+
 For $f: \mathbb{R}^n \to \mathbb{R}$, $\nabla f \in \mathbb{R}^{1 \times n}$ is a row vector of all partial derivatives. It points in the direction of steepest ascent.
 
 ---
 
 **Q3. ⚠️ What is the Jacobian? What are its dimensions?**
+
+🧭 **Exam Priority: HIGH**
 
 For $f: \mathbb{R}^n \to \mathbb{R}^m$, the Jacobian $J \in \mathbb{R}^{m \times n}$ has $(i,j)$-entry $\frac{\partial f_i}{\partial x_j}$. Dimensions: rows = number of outputs, columns = number of inputs.
 
@@ -583,17 +638,23 @@ For $f: \mathbb{R}^n \to \mathbb{R}^m$, the Jacobian $J \in \mathbb{R}^{m \times
 
 **Q4. State the chain rule for $f: \mathbb{R}^n \to \mathbb{R}$, $\mathbf{x}: \mathbb{R} \to \mathbb{R}^n$.**
 
+🧭 **Exam Priority: HIGH**
+
 $$\frac{d(f \circ \mathbf{x})}{dt} = \sum_{i=1}^n \frac{\partial f}{\partial x_i} \frac{dx_i}{dt} = \nabla_x f \cdot \dot{\mathbf{x}}$$
 
 ---
 
 **Q5. ⚠️ What is the Hessian? When is it symmetric?**
 
+🧭 **Exam Priority: HIGH**
+
 The Hessian $H = \nabla^2 f \in \mathbb{R}^{n \times n}$ collects all second partial derivatives. It is symmetric when $f$ is twice continuously differentiable (Schwarz's theorem: $\frac{\partial^2 f}{\partial x_i \partial x_j} = \frac{\partial^2 f}{\partial x_j \partial x_i}$).
 
 ---
 
 **Q6. What does the Hessian tell us about a critical point?**
+
+🧭 **Exam Priority: HIGH**
 
 At a critical point $\nabla f = 0$:
 - $H$ positive definite → local minimum
@@ -604,17 +665,23 @@ At a critical point $\nabla f = 0$:
 
 **Q7. Compute $\nabla f$ for $f(x_1, x_2) = 3x_1^2 - 2x_1 x_2 + x_2^3$.**
 
+🧭 **Exam Priority: MEDIUM-HIGH**
+
 $$\nabla f = [6x_1 - 2x_2,\ -2x_1 + 3x_2^2]$$
 
 ---
 
 **Q8. Compute the Jacobian of $f: \mathbb{R}^2 \to \mathbb{R}^2$, $f(x_1, x_2) = (x_1^2 + x_2, x_1 - x_2^2)$.**
 
+🧭 **Exam Priority: HIGH**
+
 $$J = \begin{bmatrix} 2x_1 & 1 \\ 1 & -2x_2 \end{bmatrix}$$
 
 ---
 
 **Q9. ⚠️ Derive the derivative of the logistic sigmoid $\sigma(x) = \frac{1}{1+e^{-x}}$.**
+
+🧭 **Exam Priority: HIGH**
 
 $$\sigma'(x) = \sigma(x)(1 - \sigma(x))$$
 
@@ -624,6 +691,8 @@ $$\sigma'(x) = \sigma(x)(1 - \sigma(x))$$
 
 **Q10. What is the derivative of the Gaussian $f(x) = e^{-(x-\mu)^2/(2\sigma^2)}$?**
 
+🧭 **Exam Priority: MEDIUM-HIGH**
+
 $$f'(x) = -\frac{x - \mu}{\sigma^2} f(x)$$
 
 ---
@@ -631,6 +700,8 @@ $$f'(x) = -\frac{x - \mu}{\sigma^2} f(x)$$
 ### Intermediate Questions
 
 **Q11. ⚠️ State the multivariate Taylor series definition.**
+
+🧭 **Exam Priority: MEDIUM-HIGH**
 
 For smooth $f: \mathbb{R}^D \to \mathbb{R}$, with $\delta = x - x_0$:
 
@@ -640,6 +711,8 @@ $$f(x) = \sum_{k=0}^\infty \frac{D_x^k f(x_0)}{k!} \delta^k$$
 
 **Q12. Write out explicitly the terms for $k = 0, 1, 2$ in the Taylor series.**
 
+🧭 **Exam Priority: MEDIUM**
+
 - $k=0$: $f(x_0)$
 - $k=1$: $\nabla_x f(x_0) \cdot \delta$
 - $k=2$: $\frac{1}{2}\delta^\top H(x_0) \delta$
@@ -648,6 +721,8 @@ $$f(x) = \sum_{k=0}^\infty \frac{D_x^k f(x_0)}{k!} \delta^k$$
 
 **Q13. ⚠️ Compute the Taylor polynomial $T_2$ of $f(x,y) = e^{x+y}$ at $(0,0)$.**
 
+🧭 **Exam Priority: MEDIUM-HIGH**
+
 - $f(0,0) = 1$, $\nabla f = [1,1]$, $H = \begin{bmatrix}1&1\\1&1\end{bmatrix}$
 - $T_2(x,y) = 1 + x + y + \frac{1}{2}(x^2 + 2xy + y^2)$
 
@@ -655,17 +730,23 @@ $$f(x) = \sum_{k=0}^\infty \frac{D_x^k f(x_0)}{k!} \delta^k$$
 
 **Q14. What is a Taylor polynomial of degree $n$?**
 
+🧭 **Exam Priority: MEDIUM**
+
 It is $T_n(x) = \sum_{k=0}^n \frac{D_x^k f(x_0)}{k!} \delta^k$ — the first $n+1$ terms of the Taylor series.
 
 ---
 
 **Q15. What is the outer product $\delta^2$ of a vector $\delta \in \mathbb{R}^D$?**
 
+🧭 **Exam Priority: LOW**
+
 $\delta^2 = \delta \otimes \delta = \delta\delta^\top \in \mathbb{R}^{D \times D}$, with $\delta^2[i,j] = \delta[i]\delta[j]$.
 
 ---
 
 **Q16. ⚠️ Derive the gradient of the least-squares loss $L = \|y - \Phi\theta\|^2$.**
+
+🧭 **Exam Priority: HIGH**
 
 Let $e = y - \Phi\theta$. Then:
 $$\nabla_\theta L = \frac{\partial L}{\partial e} \cdot \frac{\partial e}{\partial \theta} = 2e^\top \cdot (-\Phi) = -2(y - \Phi\theta)^\top\Phi = 2\theta^\top\Phi^\top\Phi - 2y^\top\Phi$$
@@ -676,11 +757,15 @@ Setting to zero gives the normal equations: $\Phi^\top\Phi\hat\theta = \Phi^\top
 
 **Q17. Compute the Hessian of $f(x,y) = x^2 + 2xy + y^3$.**
 
+🧭 **Exam Priority: MEDIUM-HIGH**
+
 $$H = \begin{bmatrix} 2 & 2 \\ 2 & 6y \end{bmatrix}$$
 
 ---
 
 **Q18. What is the chain rule for $f: \mathbb{R}^n \to \mathbb{R}$, $\mathbf{x}: \mathbb{R}^m \to \mathbb{R}^n$?**
+
+🧭 **Exam Priority: HIGH**
 
 $$\frac{\partial(f \circ \mathbf{x})}{\partial \mathbf{s}} = \underbrace{\nabla_\mathbf{x} f}_{1 \times n} \cdot \underbrace{J_\mathbf{x}}_{n \times m} \in \mathbb{R}^{1 \times m}$$
 
@@ -688,11 +773,15 @@ $$\frac{\partial(f \circ \mathbf{x})}{\partial \mathbf{s}} = \underbrace{\nabla_
 
 **Q19. When does the Taylor series of a polynomial give an exact representation?**
 
+🧭 **Exam Priority: MEDIUM**
+
 When the Taylor series is expanded to the same degree as the polynomial. A degree-$d$ polynomial's Taylor series is exact at order $d$ and all higher terms vanish.
 
 ---
 
 **Q20. ⚠️ Apply the chain rule: $f(x_1,x_2) = x_1 + 2x_2$, $\mathbf{x}(t) = (\sin t, \cos t)$.**
+
+🧭 **Exam Priority: HIGH**
 
 $$\nabla f = [1, 2], \quad \dot{\mathbf{x}} = [\cos t, -\sin t]^\top$$
 $$\frac{d(f \circ \mathbf{x})}{dt} = \cos t + 2(-\sin t) = \cos t - 2\sin t$$
@@ -703,11 +792,15 @@ $$\frac{d(f \circ \mathbf{x})}{dt} = \cos t + 2(-\sin t) = \cos t - 2\sin t$$
 
 **Q21. ⚠️ Describe backpropagation. What mathematical principle underlies it?**
 
+🧭 **Exam Priority: HIGH**
+
 Backpropagation computes gradients of a loss function $L$ with respect to all parameters in a neural network by applying the **chain rule** layer by layer from output to input. At each layer, we compute $\frac{\partial L}{\partial \text{layer output}}$ and multiply by the local Jacobian to propagate backward.
 
 ---
 
 **Q22. ⚠️ Carry out the full forward and backward pass for $w^{(1)}=1, b^{(1)}=0, w^{(2)}=2, b^{(2)}=1$, input $x=3$, target $y=10$.**
+
+🧭 **Exam Priority: HIGH**
 
 *Forward:*
 - $z^{(1)} = 1 \cdot 3 + 0 = 3$
@@ -726,11 +819,15 @@ Backpropagation computes gradients of a loss function $L$ with respect to all pa
 
 **Q23. What happens to gradients when a ReLU neuron has a negative pre-activation?**
 
+🧭 **Exam Priority: MEDIUM-HIGH**
+
 The gradient is **zero** (the neuron is "dead"). No gradient flows back through that neuron, meaning parameters feeding it will not update. This is the "dying ReLU" problem.
 
 ---
 
 **Q24. What is the Laplace approximation and how does it use the Hessian?**
+
+🧭 **Exam Priority: LOW-MEDIUM**
 
 The Laplace approximation approximates a distribution $p(x)$ as a Gaussian centered at its mode $x^*$. Using a second-order Taylor expansion of $\log p(x)$:
 
@@ -742,6 +839,8 @@ This gives approximation $p(x) \approx \mathcal{N}(x^*, H^{-1}(x^*))$.
 
 **Q25. How is the Taylor series used in the Extended Kalman Filter?**
 
+🧭 **Exam Priority: LOW-MEDIUM**
+
 The EKF uses a **first-order Taylor expansion** of the nonlinear measurement/transition function $f$ around the current state estimate $\mu$:
 
 $$f(x) \approx f(\mu) + J_f(\mu)(x - \mu)$$
@@ -752,6 +851,8 @@ This linearizes the function, allowing the standard Kalman filter update equatio
 
 **Q26. ⚠️ Compute the full Taylor series expansion of $f(x,y) = x^2 + 2xy + y^3$ at $(1,2)$.**
 
+🧭 **Exam Priority: HIGH**
+
 $$f(x,y) = 13 + 6(x-1) + 14(y-2) + (x-1)^2 + 2(x-1)(y-2) + 6(y-2)^2 + (y-2)^3$$
 
 (Full derivation in Section 8.6 above.)
@@ -759,6 +860,8 @@ $$f(x,y) = 13 + 6(x-1) + 14(y-2) + (x-1)^2 + 2(x-1)(y-2) + 6(y-2)^2 + (y-2)^3$$
 ---
 
 **Q27. Explain what $D_x^k f(x_0) \delta^k$ means for $k = 3$.**
+
+🧭 **Exam Priority: LOW-MEDIUM**
 
 It is:
 $$\sum_{i=1}^{D}\sum_{j=1}^{D}\sum_{k=1}^{D} D^3 f(x_0)[i,j,k] \cdot \delta[i]\delta[j]\delta[k]$$
@@ -769,6 +872,8 @@ A sum of all cubic monomials in $\delta$, weighted by the third-order tensor $D^
 
 **Q28. ⚠️ Compute $f'(x) = \frac{d}{dx}[\log(x^4)\sin(x^3)]$.**
 
+🧭 **Exam Priority: HIGH**
+
 $$f'(x) = \frac{4\sin(x^3)}{x} + 12x^2\log(x)\cos(x^3)$$
 
 (Full derivation in Exercise 5.1.)
@@ -777,11 +882,15 @@ $$f'(x) = \frac{4\sin(x^3)}{x} + 12x^2\log(x)\cos(x^3)$$
 
 **Q29. What are the dimensions of the Hessian for $f: \mathbb{R}^n \to \mathbb{R}^m$?**
 
+🧭 **Exam Priority: MEDIUM**
+
 For a vector-valued function $f: \mathbb{R}^n \to \mathbb{R}^m$, the Hessian is an $(m \times n \times n)$ **tensor** — one $n \times n$ Hessian matrix per output dimension.
 
 ---
 
 **Q30. ⚠️ Derive the normal equations from the least-squares gradient.**
+
+🧭 **Exam Priority: HIGH**
 
 From $\nabla_\theta L = -2\Phi^\top(y - \Phi\theta) = 0$:
 
